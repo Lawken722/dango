@@ -66,7 +66,7 @@ const IndexPage: NextPage = (): ReactElement => {
               const restEndHour = Number(restHoursAndMinutes2[0]);
               const restEndMinutes = Number(restHoursAndMinutes2[1]);
                console.log(((endHour * 60 + endMinutes) - (startHour * 60 + startMinutes)) - ((restEndHour *60 + restEndMinutes) - (restStartHour * 60 + restStartMinutes)))
-              setResult(`${((endHour * 60 + endMinutes) - (startHour * 60 + startMinutes)) - ((restEndHour *60 + restEndMinutes) - (restStartHour * 60 + restStartMinutes))}`)
+              setResult(`${((endHour * 60 + endMinutes) - (startHour * 60 + startMinutes)) - ((restEndHour *60 + restEndMinutes) - (restStartHour * 60 + restStartMinutes))}`+ '分')
             }}>
             <span className="select-none text-xl">=</span>
 
