@@ -64,9 +64,13 @@ const IndexPage: NextPage = (): ReactElement => {
               const restStartHour = Number(restHoursAndMinutes[0]);
               const restStartMinutes = Number(restHoursAndMinutes[1]);
               const restEndHour = Number(restHoursAndMinutes2[0]);
-              const restEndMinutes = Number(restHoursAndMinutes2[1]);
-               console.log(((endHour * 60 + endMinutes) - (startHour * 60 + startMinutes)) - ((restEndHour *60 + restEndMinutes) - (restStartHour * 60 + restStartMinutes)))
-              setResult(`${((endHour * 60 + endMinutes) - (startHour * 60 + startMinutes)) - ((restEndHour *60 + restEndMinutes) - (restStartHour * 60 + restStartMinutes))}`+ '分')
+              const restEndMinutes = Number(restHoursAndMinutes2[1]); 
+              const Result2 =(((endHour * 60 + endMinutes) - (startHour * 60 + startMinutes)) - ((restEndHour *60 + restEndMinutes) - (restStartHour * 60 + restStartMinutes)));
+              const ResultMin =(Result2 % 60);
+              console.log(Result2);
+              console.log(ResultMin);
+              /* result/60:result% */
+              setResult(`${Result2/60}:${ResultMin}`)
             }}>
             <span className="select-none text-xl">=</span>
 
